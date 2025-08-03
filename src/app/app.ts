@@ -28,7 +28,6 @@ export class App implements OnInit {
 
       const themeChangeListener = (e: any) => {
         document.body.classList.toggle('dark-theme', e.matches);
-        document.body.classList.toggle('light-theme', !e.matches);
       };
 
       themeMatchMedia.addEventListener('change', themeChangeListener);
