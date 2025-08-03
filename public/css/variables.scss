@@ -1,7 +1,4 @@
 :root {
-  --background-color: #F5F5F5;
-  --text-color: #151515;
-
   /** primary **/
   --color-primary: #FAE202;
   --color-primary-hover: #D5BE00;
@@ -48,5 +45,14 @@
   --color-action-blue-60: #97DDFD;
   --color-action-blue-80: #74D1FC;
   --color-action-blue-100: #51C6FB;
+}
 
+.light-theme {
+  --background-color: #F5F5F5;
+  --text-color: #07090D;
+}
+
+.dark-theme {
+  --background-color: #161718;
+  --text-color: #DDDDDD;
 }
