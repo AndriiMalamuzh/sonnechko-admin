@@ -1,0 +1,52 @@
+:root {
+  --background-color: #F5F5F5;
+  --text-color: #151515;
+
+  /** primary **/
+  --color-primary: #FAE202;
+  --color-primary-hover: #D5BE00;
+  --color-primary-rgb: 250, 226, 2;
+
+  /** Shades of Blue **/
+  --color-shades-blue-20: #F5F9FF;
+  --color-shades-blue-40: #EBF3FF;
+  --color-shades-blue-60: #E0EDFF;
+  --color-shades-blue-80: #D6E7FF;
+  --color-shades-blue-100: #D8D6F5;
+
+  /** Greyscale **/
+  --color-greyscale-20: #F8F9FA;
+  --color-greyscale-40: #F4F4F5;
+  --color-greyscale-60: #E4E4E7;
+  --color-greyscale-80: #828282;
+  --color-greyscale-100: #9096A2;
+  --color-greyscale-200: #70707A;
+  --color-greyscale-400: #585860;
+  --color-greyscale-600: #44444B;
+  --color-greyscale-800: #313135;
+  --color-greyscale-900: #0B0B0C;
+
+  /** Action red **/
+  --color-action-red-20: #FEDADA;
+  --color-action-red-40: #FDB5B5;
+  --color-action-red-60: #FC8F8F;
+  --color-action-red-80: #FB6A6A;
+  --color-action-red-100: #FA4545;
+  --color-action-red-120: #E53030;
+
+  /** Action green **/
+  --color-action-green-20: #CEEFDF;
+  --color-action-green-40: #9DDFBF;
+  --color-action-green-60: #6CCFA0;
+  --color-action-green-80: #3BBF80;
+  --color-action-green-100: #0AAF60;
+  --color-action-green-120: #159D5C;
+
+  /** Action blue **/
+  --color-action-blue-20: #DCF4FE;
+  --color-action-blue-40: #B9E8FD;
+  --color-action-blue-60: #97DDFD;
+  --color-action-blue-80: #74D1FC;
+  --color-action-blue-100: #51C6FB;
+
+}
