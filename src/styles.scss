@@ -1,6 +1,6 @@
 /* Import styles */
-@import '../public/css/variables.scss';
-@import '../public/css/fonts.scss';
+@use '../public/css/variables.scss';
+@use '../public/css/fonts.scss';
 
 body {
   margin: 0;
