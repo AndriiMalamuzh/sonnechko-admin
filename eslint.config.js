@@ -26,6 +26,7 @@ module.exports = tseslint.config(
       ],
       '@typescript-eslint/no-explicit-any': 'off',
       '@angular-eslint/prefer-standalone': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
       '@typescript-eslint/explicit-module-boundary-types': ['error'],
       '@angular-eslint/prefer-on-push-component-change-detection': ['warn'],
     },

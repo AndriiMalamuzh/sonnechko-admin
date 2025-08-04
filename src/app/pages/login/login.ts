@@ -1,12 +1,13 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormFieldLabel } from '@ui/form-field/components/form-field-label/form-field-label';
 import { FormField } from '@ui/form-field/form-field';
-import { FormFieldLabel } from '@ui/form-field/form-field-label/form-field-label';
+import { Input } from '@ui/input/input';
 
 @Component({
   selector: 'app-login',
-  imports: [NgOptimizedImage, ReactiveFormsModule, FormField, FormFieldLabel],
+  imports: [NgOptimizedImage, ReactiveFormsModule, FormField, FormFieldLabel, Input],
   templateUrl: './login.html',
   styleUrl: './login.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
