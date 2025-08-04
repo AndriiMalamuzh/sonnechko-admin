@@ -1,11 +1,13 @@
 :root {
   --background-color: #F5F5F5;
   --text-color: #07090D;
+  --error-color: #FA4545;
+  --radius: 10px;
 
   /** primary **/
-  --color-primary: #FAE202;
-  --color-primary-hover: #D5BE00;
-  --color-primary-rgb: 250, 226, 2;
+  --color-primary: #1A7FDC;
+  --color-primary-hover: #1670C4;
+  --color-primary-rgb: 0, 79, 152;
 
   /** Shades of Blue **/
   --color-shades-blue-20: #F5F9FF;

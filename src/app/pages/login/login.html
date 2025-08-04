@@ -1,0 +1,18 @@
+<section class="login">
+  <div class="login__container">
+    <img
+      ngSrc="/img/logo.svg"
+      alt="Sonnechko"
+      class="login__logo"
+      width="200"
+      height="129"
+      priority
+    >
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login__form">
+      <app-form-field>
+        <app-form-field-label>Email</app-form-field-label>
+<!--        <input input type="text" formControlName="email" required>-->
+      </app-form-field>
+    </form>
+  </div>
+</section>

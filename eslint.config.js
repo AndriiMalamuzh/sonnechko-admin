@@ -42,6 +42,7 @@ module.exports = tseslint.config(
       '@angular-eslint/template/prefer-control-flow': ['warn'],
       '@angular-eslint/template/interactive-supports-focus': ['warn'],
       '@angular-eslint/template/click-events-have-key-events': ['warn'],
+      'prettier/prettier': 'off',
     },
   }
 );
