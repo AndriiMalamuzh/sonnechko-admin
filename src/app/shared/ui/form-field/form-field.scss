@@ -1,3 +1,21 @@
+::ng-deep {
+  :root {
+    --form-field-border-color: #EDEDED;
+    --form-field-background-color: var(--background-color);
+    --form-field-label-color: rgba(7, 9, 13, 0.5);
+  }
+
+  .dark-theme {
+    --form-field-border-color: #474D57;
+    --form-field-background-color: var(--background-color);
+    --form-field-label-color: #8A8A8A;
+  }
+}
+
+:host {
+  display: block;
+}
+
 ::ng-deep .form-field__input {
   width: 100%;
   padding: 0;
@@ -6,6 +24,7 @@
   font-size: 16px;
   outline: none;
   transform: translateY(7px);
+  color: inherit;
 
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
@@ -18,10 +37,11 @@
   width: 100%;
   height: 46px;
   padding: 0 10px;
-  border: 1px solid #CCC;
-  border-radius: 8px;
+  border: 1px solid var(--form-field-border-color);
+  border-radius: var(--border-radius);
   gap: 5px;
-  background: #FFF;
+  background: var(--form-field-background-color);
+  transition: border-color 0.1s linear;
 
   &:not(.form-field--disabled):hover {
     border-color: var(--color-primary);
@@ -42,7 +62,7 @@
     top: 2px;
     left: 0;
     width: 100%;
-    color: #757575;
+    color: var(--form-field-label-color);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -51,7 +71,7 @@
     font-size: 16px;
     line-height: 1;
     pointer-events: none;
-    background: #FFF;
+    background: var(--form-field-background-color);
     z-index: 1;
     padding-bottom: 10px;
   }
@@ -80,10 +100,10 @@
   }
 
   &.ng-touched.ng-invalid {
-    border-color: var(--color-error);
+    border-color: var(--error-color);
 
     .form-field__label {
-      color: #EC0000;
+      color: var(--error-color);
     }
   }
 
@@ -103,7 +123,6 @@
 
   &--disabled {
     opacity: 0.7;
-    background: #F2F2F2;
 
     &.form-field--input,
     &.form-field--select {

@@ -1,7 +1,9 @@
 import { isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LANGUAGES } from '@constants/LANGUAGES';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageStore } from '@store/language.store';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +13,9 @@ import { TranslateService } from '@ngx-translate/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App implements OnInit {
-  private platformId = inject(PLATFORM_ID);
-  private translateService = inject(TranslateService);
+  private readonly platformId = inject(PLATFORM_ID);
+  private readonly translateService = inject(TranslateService);
+  private readonly languageStore = inject(LanguageStore);
 
   ngOnInit(): void {
     this.initializeThemeListener();
@@ -33,14 +36,14 @@ export class App implements OnInit {
   }
 
   private initializeLanguage(): void {
-    const availableLanguages = ['de', 'en', 'ru', 'uk'];
+    const availableLanguages = LANGUAGES.map(i => i.code);
 
     if (isPlatformBrowser(this.platformId)) {
       const browserLang = navigator.language.split('-')[0];
-      const langToUse = availableLanguages.includes(browserLang) ? browserLang : 'de';
-      this.translateService.use(langToUse);
-    } else {
-      this.translateService.use('de');
+      if (availableLanguages.includes(browserLang)) {
+        this.languageStore.setLanguage(browserLang);
+      }
     }
+    this.translateService.use(this.languageStore.language());
   }
 }

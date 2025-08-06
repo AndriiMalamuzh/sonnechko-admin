@@ -39,22 +39,6 @@ export class FormField implements AfterViewInit {
     return this.inputDirective()?.el?.nativeElement?.tagName?.toLowerCase() === 'textarea';
   });
 
-  private controlTouched = signal(false);
-  private controlDirty = signal(false);
-  private controlInvalid = signal(false);
-
-  controlClasses = computed(() => {
-    if (!this.ngControl() || !this.ngControl().control) return '';
-
-    return [
-      this.controlTouched() ? 'ng-touched' : 'ng-untouched',
-      this.controlDirty() ? 'ng-dirty' : 'ng-pristine',
-      this.controlInvalid() ? 'ng-invalid' : 'ng-valid',
-    ]
-      .filter(Boolean)
-      .join(' ');
-  });
-
   constructor() {
     effect(() => {
       if (this.selectComponent()) {
@@ -69,27 +53,10 @@ export class FormField implements AfterViewInit {
     });
 
     if (this.ngControl()?.control) {
-      const control = this.ngControl().control;
-
-      control.valueChanges?.subscribe(value => {
+      this.ngControl().control.valueChanges?.subscribe(value => {
         this.isHasValue.set(!!value?.length);
       });
-
-      control.statusChanges?.subscribe(() => {
-        this.updateControlState();
-      });
-
-      this.isHasValue.set(!!control.value);
-      this.updateControlState();
-    }
-  }
-
-  private updateControlState(): void {
-    if (this.ngControl()?.control) {
-      const control = this.ngControl().control;
-      this.controlTouched.set(control.touched);
-      this.controlDirty.set(control.dirty);
-      this.controlInvalid.set(control.invalid);
+      this.isHasValue.set(!!this.ngControl().control.value);
     }
   }
 
@@ -99,10 +66,7 @@ export class FormField implements AfterViewInit {
       this.isDisabled.set(this.inputDirective().isDisabled());
       this.isRequired.set(this.inputDirective().isRequired());
       this.inputDirective().onFocus(() => this.isFocused.set(true));
-      this.inputDirective().onBlur(() => {
-        this.isFocused.set(false);
-        setTimeout(() => this.updateControlState());
-      });
+      this.inputDirective().onBlur(() => this.isFocused.set(false));
       this.inputDirective().onInput((value: string) => this.isHasValue.set(value.length > 0));
     } else if (this.selectComponent()) {
       this.isDisabled.set(this.selectComponent().disabled());
@@ -120,5 +84,17 @@ export class FormField implements AfterViewInit {
     if (this.selectComponent() && !this.isDisabled()) {
       this.selectComponent().toggleDropdown();
     }
+  }
+
+  get controlClasses(): string {
+    if (!this.ngControl() || !this.ngControl().control) return '';
+
+    return [
+      this.ngControl().control.touched ? 'ng-touched' : 'ng-untouched',
+      this.ngControl().control.dirty ? 'ng-dirty' : 'ng-pristine',
+      this.ngControl().control.invalid ? 'ng-invalid' : 'ng-valid',
+    ]
+      .filter(Boolean)
+      .join(' ');
   }
 }
