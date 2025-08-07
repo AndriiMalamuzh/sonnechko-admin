@@ -1,0 +1,25 @@
+.login-languages {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  &__button {
+    padding: 0;
+    background: none;
+    opacity: 0.8;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .login-languages__button:hover {
+    text-decoration: underline;
+  }
+}

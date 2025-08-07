@@ -1,4 +1,8 @@
 {
-  "HELLO": "Привіт",
-  "WELCOME": "Ласкаво просимо до нашого додатку!"
+  "EMAIL_REQUIRED": "Email обов'язковий!",
+  "EMAIL_INVALID": "Будь ласка, введіть дійсну адресу електронної пошти",
+  "PASSWORD": "Пароль",
+  "PASSWORD_REQUIRED": "Пароль обов'язковий!",
+  "LOGIN": "Увійти",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email або пароль невірний"
 }

@@ -1,4 +1,8 @@
 {
-  "HELLO": "Hello",
-  "WELCOME": "Welcome to our app!"
+  "EMAIL_REQUIRED": "Email is required!",
+  "EMAIL_INVALID": "Please enter a valid email address",
+  "PASSWORD": "Password",
+  "PASSWORD_REQUIRED": "Password is required!",
+  "LOGIN": "Login",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email or password is incorrect"
 }

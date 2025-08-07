@@ -1,0 +1,44 @@
+<section class="login">
+  <div class="login__wrap">
+    <img
+      ngSrc="/img/logo.svg"
+      alt="Sonnechko"
+      class="login__logo"
+      width="150"
+      height="97"
+      priority
+    >
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login__form">
+      <app-form-field class="form-control">
+        <app-form-field-label>Email</app-form-field-label>
+        <input type="text" input formControlName="email">
+        @if (form.get('email').hasError('required') && form.get('email').touched) {
+          <app-form-field-error>{{'EMAIL_REQUIRED' | translate}}</app-form-field-error>
+        }
+        @if (form.get('email').hasError('email') && form.get('email').touched) {
+          <app-form-field-error>{{'EMAIL_INVALID' | translate}}</app-form-field-error>
+        }
+      </app-form-field>
+
+      <app-form-field class="form-control">
+        <app-form-field-label>{{'PASSWORD' | translate}}</app-form-field-label>
+        <input [type]="isShowPassword() ? 'text' : 'password'" input formControlName="password">
+        <button type="button" class="login__visibility" (click)="togglePasswordVisibility()" form-field-suffix>
+          <app-icon [name]="isShowPassword() ? 'visibility' : 'visibility-off'" [size]="24"/>
+        </button>
+        @if (form.get('password').hasError('required') && form.get('password').touched) {
+          <app-form-field-error>{{'PASSWORD_REQUIRED' | translate}}</app-form-field-error>
+        }
+      </app-form-field>
+
+      <button type="submit" button color="primary" class="full-width">
+        @if (store.isLoading()) {
+          <app-spinner />
+        } @else {
+          {{'LOGIN' | translate}}
+        }
+      </button>
+    </form>
+  </div>
+  <app-login-languages />
+</section>

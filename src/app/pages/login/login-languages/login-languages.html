@@ -1,0 +1,10 @@
+<nav class="login-languages">
+  @for (lang of languages; track $index) {
+    <button
+      type="button"
+      class="login-languages__button"
+      [class.active]="store.language() === lang.code"
+      (click)="onLanguageChange(lang.code)"
+    >{{ lang.name }}</button>
+  }
+</nav>

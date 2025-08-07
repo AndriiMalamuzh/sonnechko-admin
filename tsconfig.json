@@ -3,7 +3,49 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "strict": true,
+    "strict": false,
+    "baseUrl": "./",
+    "paths": {
+      "@core/*": [
+        "src/app/core/*"
+      ],
+      "@guards/*": [
+        "src/app/core/guards/*"
+      ],
+      "@interceptors/*": [
+        "src/app/core/interceptors/*"
+      ],
+      "@services/*": [
+        "src/app/core/services/*"
+      ],
+      "@store/*": [
+        "src/app/core/store/*"
+      ],
+      "@animations/*": [
+        "src/app/shared/animations/*"
+      ],
+      "@components/*": [
+        "src/app/shared/components/*"
+      ],
+      "@constants/*": [
+        "src/app/shared/constants/*"
+      ],
+      "@directives/*": [
+        "src/app/shared/directives/*"
+      ],
+      "@interfaces/*": [
+        "src/app/shared/interfaces/*"
+      ],
+      "@pipes/*": [
+        "src/app/shared/pipes/*"
+      ],
+      "@ui/*": [
+        "src/app/shared/ui/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ]
+    },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

@@ -1,4 +1,8 @@
 {
-  "HELLO": "Привет",
-  "WELCOME": "Добро пожаловать!"
+  "EMAIL_REQUIRED": "Email обязателен!",
+  "EMAIL_INVALID": "Пожалуйста, введите действительный адрес электронной почты",
+  "PASSWORD": "Пароль",
+  "PASSWORD_REQUIRED": "Пароль обязателен!",
+  "LOGIN": "Войти",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email или пароль неверный"
 }

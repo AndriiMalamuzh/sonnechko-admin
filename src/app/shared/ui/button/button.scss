@@ -1,0 +1,115 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 5px;
+  text-align: center;
+  font-size: 16px;
+  padding: 0 24px;
+  height: 46px;
+  min-width: 64px;
+  border-radius: var(--border-radius);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+
+  &[disabled] {
+    cursor: auto;
+  }
+
+  &-flat {
+    border: 1px solid transparent;
+
+    &.button-primary {
+      background: var(--color-primary);
+      color: #07090D;
+
+      &:focus-visible:not([disabled]):not(:active) {
+        background: var(--color-primary-hover);
+      }
+
+      &:active:not([disabled]):not(:active) {
+        background: var(--color-primary-active);
+      }
+    }
+
+    &.button-secondary {
+      background: var(--color-secondary);
+      color: #FFF;
+    }
+
+    &[disabled] {
+      background: #E1DFE4;
+      color: #959499;
+    }
+  }
+
+  &-stroked {
+    background: transparent;
+    border: 1px solid #EFEFEF;
+
+    &.button-primary {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    &.button-secondary {
+      border-color: var(--color-secondary);
+      color: var(--color-secondary);
+    }
+
+    &[disabled] {
+      border-color: #959499;
+      color: #959499;
+    }
+  }
+
+  &-icon {
+    min-width: initial;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+  }
+}
+
+@media (hover: hover) {
+  .button {
+    &:hover:not([disabled]):not(:active) {
+      background: #F4F4F4;
+    }
+
+    &-flat {
+      &.button-primary {
+        &:hover:not([disabled]):not(:active) {
+          background: var(--color-primary-hover);
+        }
+      }
+
+      &.button-secondary {
+        &:hover:not([disabled]):not(:active) {
+          background: rgba(var(--color-secondary-rgb), 0.8);
+        }
+      }
+    }
+
+    &-stroked {
+      background: transparent;
+      border: 1px solid #EFEFEF;
+
+      &.button-primary {
+        &:hover:not([disabled]):not(:active) {
+          background: var(--color-primary);
+          color: #FFF;
+        }
+      }
+
+      &.button-secondary {
+        &:hover:not([disabled]):not(:active) {
+          background: var(--color-secondary);
+          color: #FFF;
+        }
+      }
+    }
+  }
+}

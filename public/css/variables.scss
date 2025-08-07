@@ -1,11 +1,18 @@
 :root {
-  --background-color: #F5F5F5;
+  --background-color: #FFFFFF;
   --text-color: #07090D;
+  --error-color: #ED4359;
+  --success-color: #47d669;
+  --warning-color: #FFC122;
+  --info-color: #3087EB;
+  --line-color: #EDEDED;
+  --border-radius: 10px;
 
   /** primary **/
-  --color-primary: #FAE202;
-  --color-primary-hover: #D5BE00;
-  --color-primary-rgb: 250, 226, 2;
+  --color-primary: #FCD535;
+  --color-primary-hover: #FFDC52;
+  --color-primary-active: #ffd52d;
+  --color-primary-rgb: 252, 213, 53;
 
   /** Shades of Blue **/
   --color-shades-blue-20: #F5F9FF;
@@ -51,6 +58,9 @@
 }
 
 .dark-theme {
-  --background-color: #161718;
+  --background-color: #16171D;
   --text-color: #DDDDDD;
+  --line-color: #2B3139;
+
+  --color-primary-hover: #DFBA1F;
 }
