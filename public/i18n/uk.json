@@ -3,5 +3,6 @@
   "EMAIL_INVALID": "Будь ласка, введіть дійсну адресу електронної пошти",
   "PASSWORD": "Пароль",
   "PASSWORD_REQUIRED": "Пароль обов'язковий!",
-  "LOGIN": "Увійти"
+  "LOGIN": "Увійти",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email або пароль невірний"
 }

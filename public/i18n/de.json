@@ -3,5 +3,6 @@
   "EMAIL_INVALID": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
   "PASSWORD": "Passwort",
   "PASSWORD_REQUIRED": "Passwort ist erforderlich!",
-  "LOGIN": "Anmelden"
+  "LOGIN": "Anmelden",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email oder Passwort ist falsch"
 }

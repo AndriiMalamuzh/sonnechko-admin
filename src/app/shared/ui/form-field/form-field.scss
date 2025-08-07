@@ -27,7 +27,9 @@
   color: inherit;
 
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--form-field-background-color) inset !important;
+    -webkit-text-fill-color: var(--text-color) !important;
+    caret-color: var(--text-color) !important;
   }
 }
 

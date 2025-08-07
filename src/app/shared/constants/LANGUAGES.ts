@@ -5,12 +5,12 @@ export interface ILanguage {
 
 export const LANGUAGES: ILanguage[] = [
   {
-    name: 'English',
-    code: 'en',
-  },
-  {
     name: 'Deutsch',
     code: 'de',
+  },
+  {
+    name: 'English',
+    code: 'en',
   },
   {
     name: 'Українська',

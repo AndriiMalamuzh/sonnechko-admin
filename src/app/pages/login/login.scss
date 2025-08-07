@@ -24,6 +24,33 @@
   &__form {
     text-align: left;
   }
+
+  &__visibility {
+    position: relative;
+    padding: 0;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--form-field-label-color);
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: var(--form-field-label-color);
+        opacity: 0.1;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {

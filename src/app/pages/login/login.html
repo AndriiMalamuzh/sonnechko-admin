@@ -22,7 +22,10 @@
 
       <app-form-field class="form-control">
         <app-form-field-label>{{'PASSWORD' | translate}}</app-form-field-label>
-        <input type="password" input formControlName="password">
+        <input [type]="isShowPassword() ? 'text' : 'password'" input formControlName="password">
+        <button type="button" class="login__visibility" (click)="togglePasswordVisibility()" form-field-suffix>
+          <app-icon [name]="isShowPassword() ? 'visibility' : 'visibility-off'" [size]="24"/>
+        </button>
         @if (form.get('password').hasError('required') && form.get('password').touched) {
           <app-form-field-error>{{'PASSWORD_REQUIRED' | translate}}</app-form-field-error>
         }
@@ -30,7 +33,7 @@
 
       <button type="submit" button color="primary" class="full-width">
         @if (store.isLoading()) {
-          Loading...
+          <app-spinner />
         } @else {
           {{'LOGIN' | translate}}
         }

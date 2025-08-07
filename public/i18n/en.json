@@ -3,5 +3,6 @@
   "EMAIL_INVALID": "Please enter a valid email address",
   "PASSWORD": "Password",
   "PASSWORD_REQUIRED": "Password is required!",
-  "LOGIN": "Login"
+  "LOGIN": "Login",
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email or password is incorrect"
 }
