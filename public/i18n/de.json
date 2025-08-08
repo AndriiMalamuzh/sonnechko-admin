@@ -4,5 +4,7 @@
   "PASSWORD": "Passwort",
   "PASSWORD_REQUIRED": "Passwort ist erforderlich!",
   "LOGIN": "Anmelden",
-  "EMAIL_OR_PASSWORD_INCORRECT": "Email oder Passwort ist falsch"
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email oder Passwort ist falsch",
+  "MY_PROFILE": "Mein Profil",
+  "LOGOUT": "Abmelden"
 }

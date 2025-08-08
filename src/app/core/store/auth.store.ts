@@ -66,9 +66,9 @@ export const AuthStore = signalStore(
       logout: rxMethod<void>(
         pipe(
           tap(() => {
-            _userStore.setUser(null);
             localStorage.removeItem('accessToken');
             _router.navigate(['/login']);
+            _userStore.setUser(null);
           }),
           switchMap(() => _authService.logout())
         )

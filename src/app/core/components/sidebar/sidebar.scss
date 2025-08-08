@@ -1,0 +1,8 @@
+:host {
+  position: relative;
+  width: 250px;
+  height: 100dvh;
+  background: var(--block-background-color);
+  border-right: 1px solid var(--line-color);
+  overflow: auto;
+}
