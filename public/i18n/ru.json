@@ -4,5 +4,7 @@
   "PASSWORD": "Пароль",
   "PASSWORD_REQUIRED": "Пароль обязателен!",
   "LOGIN": "Войти",
-  "EMAIL_OR_PASSWORD_INCORRECT": "Email или пароль неверный"
+  "EMAIL_OR_PASSWORD_INCORRECT": "Email или пароль неверный",
+  "MY_PROFILE": "Мой профиль",
+  "LOGOUT": "Выйти"
 }

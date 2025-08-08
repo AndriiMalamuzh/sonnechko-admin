@@ -1,0 +1,88 @@
+::ng-deep {
+  :root {
+    --header-user-menu-user-bg: #F3F3F3;
+    --header-user-menu-user-hover-bg: #EEEEEE;
+  }
+
+  .dark-theme {
+    --header-user-menu-user-bg: #262B33;
+    --header-user-menu-user-hover-bg: #292E37;
+  }
+}
+
+:host {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 10px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background: var(--block-background-color);
+  border: 1px solid var(--line-color);
+  width: 300px;
+  cursor: auto;
+}
+
+.header-user-menu {
+  &-user {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    background: var(--header-user-menu-user-bg);
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    text-decoration: none;
+    margin-bottom: 10px;
+
+    &:hover {
+      background: var(--header-user-menu-user-hover-bg);
+    }
+
+    &__image {
+      margin-right: 10px;
+    }
+
+    &__info {
+      width: calc(100% - 42px);
+    }
+
+    &__name {
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+    &__username {
+      color: var(--color-greyscale-80);
+      white-space: nowrap;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+    &__view {
+      color: var(--color-primary-text);
+    }
+  }
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 20px);
+  gap: 5px;
+  padding: 8px 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  background: none;
+
+  &:hover {
+    background: var(--header-user-menu-user-hover-bg);
+  }
+
+  app-icon {
+    color: var(--color-primary-text);
+  }
+}

@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  align-items: flex-start;
+
+  &-container {
+    flex-grow: 1;
+  }
+}
+
+.content {
+  padding: 15px;
+}

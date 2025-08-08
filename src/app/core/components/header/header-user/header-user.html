@@ -1,0 +1,16 @@
+<div
+  class="header-user"
+  [class.active]="isShowMenu()"
+  (click)="isShowMenu.set(true);"
+  #headerUserElement
+>
+  <div class="header-user__wrap">
+    <app-user-image [user]="userStore.user()" class="header-user__image" />
+    <div class="header-user__arrow">
+      <app-icon name="expand-more" [size]="12" />
+    </div>
+  </div>
+  @if (isShowMenu()) {
+    <app-header-user-menu />
+  }
+</div>

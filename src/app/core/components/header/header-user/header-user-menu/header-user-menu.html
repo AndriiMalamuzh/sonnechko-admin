@@ -1,0 +1,13 @@
+<div class="header-user-menu">
+  <a routerLink="/" class="header-user-menu-user">
+    <app-user-image [user]="userStore.user()" class="header-user-menu-user__image" />
+    <div class="header-user-menu-user__info">
+      <p class="header-user-menu-user__name">{{ userStore.user()?.first_name }} {{ userStore.user()?.last_name }}</p>
+      <p class="header-user-menu-user__view">{{'MY_PROFILE' | translate}}</p>
+    </div>
+  </a>
+  <button class="logout" type="button" (click)="onLogout()">
+    <app-icon name="logout" [size]="20" />
+    <span>{{'LOGOUT' | translate}}</span>
+  </button>
+</div>

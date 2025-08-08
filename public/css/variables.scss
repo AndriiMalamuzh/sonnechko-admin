@@ -1,5 +1,6 @@
 :root {
   --background-color: #FFFFFF;
+  --block-background-color: #F9F9F9;
   --text-color: #07090D;
   --error-color: #ED4359;
   --success-color: #47d669;
@@ -11,7 +12,8 @@
   /** primary **/
   --color-primary: #FCD535;
   --color-primary-hover: #FFDC52;
-  --color-primary-active: #ffd52d;
+  --color-primary-active: #FFD52D;
+  --color-primary-text: #FFA500;
   --color-primary-rgb: 252, 213, 53;
 
   /** Shades of Blue **/
@@ -59,6 +61,8 @@
 
 .dark-theme {
   --background-color: #16171D;
+  --block-background-color: #20212A;
+  --color-primary-text: var(--color-primary);
   --text-color: #DDDDDD;
   --line-color: #2B3139;
 
