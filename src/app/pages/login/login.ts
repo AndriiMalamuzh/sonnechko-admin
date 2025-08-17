@@ -1,6 +1,7 @@
 import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { EMAIL_REGEX } from '@constants/email-regex';
 import { ILoginRequest } from '@interfaces/auth/login-request.interface';
 import { TranslateModule } from '@ngx-translate/core';
 import { AuthStore } from '@store/auth.store';
@@ -43,7 +44,7 @@ export class Login {
   readonly isShowPassword = signal<boolean>(false);
 
   form = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
     password: ['', Validators.required],
   });
 

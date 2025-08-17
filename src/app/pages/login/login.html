@@ -15,7 +15,7 @@
         @if (form.get('email').hasError('required') && form.get('email').touched) {
           <app-form-field-error>{{'EMAIL_REQUIRED' | translate}}</app-form-field-error>
         }
-        @if (form.get('email').hasError('email') && form.get('email').touched) {
+        @if (form.get('email').hasError('pattern') && form.get('email').touched) {
           <app-form-field-error>{{'EMAIL_INVALID' | translate}}</app-form-field-error>
         }
       </app-form-field>

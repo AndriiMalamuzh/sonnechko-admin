@@ -3,7 +3,7 @@ export interface ILanguage {
   code: string;
 }
 
-export const LANGUAGES: ILanguage[] = [
+export const Languages: ILanguage[] = [
   {
     name: 'Deutsch',
     code: 'de',

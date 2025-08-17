@@ -1,7 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LANGUAGES } from '@constants/LANGUAGES';
+import { Languages } from '@constants/languages';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageStore } from '@store/language.store';
 
@@ -36,7 +36,7 @@ export class App implements OnInit {
   }
 
   private initializeLanguage(): void {
-    const availableLanguages = LANGUAGES.map(i => i.code);
+    const availableLanguages = Languages.map(i => i.code);
 
     if (isPlatformBrowser(this.platformId)) {
       const browserLang = navigator.language.split('-')[0];

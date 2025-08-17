@@ -25,7 +25,7 @@ export class ToastService {
 
   private currentToast = signal<ComponentRef<Toast> | null>(null);
 
-  open({ message, type = 'success', duration = 3000 }: ToastConfig): void {
+  open({ message, type = 'success', duration = 30000 }: ToastConfig): void {
     if (this.currentToast() !== null) {
       this.destroyToast(this.currentToast());
     }

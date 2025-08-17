@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { LANGUAGES } from '@constants/LANGUAGES';
+import { Languages } from '@constants/languages';
 import { LanguageStore } from '@store/language.store';
 
 @Component({
@@ -12,7 +12,7 @@ import { LanguageStore } from '@store/language.store';
 export class LoginLanguages {
   readonly store = inject(LanguageStore);
 
-  readonly languages = LANGUAGES;
+  readonly languages = Languages;
 
   onLanguageChange(language: string): void {
     if (this.store.language() !== language) {
