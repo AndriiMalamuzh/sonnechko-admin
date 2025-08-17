@@ -44,11 +44,14 @@ export const AuthStore = signalStore(
                       message: 'EMAIL_OR_PASSWORD_INCORRECT',
                       type: 'error',
                     });
+                    patchState(store, { isLoading: false });
                     return;
                   }
                   _userStore.setUser(res.user);
                   localStorage.setItem('accessToken', res.accessToken);
-                  _router.navigate(['/dashboard']);
+                  _router
+                    .navigate(['/dashboard'])
+                    .then(() => patchState(store, { isLoading: false }));
                 },
                 error: (error: HttpErrorResponse) => {
                   _toastService.open({
@@ -56,8 +59,8 @@ export const AuthStore = signalStore(
                       error.status === 404 ? 'EMAIL_OR_PASSWORD_INCORRECT' : error.error.message,
                     type: 'error',
                   });
+                  patchState(store, { isLoading: false });
                 },
-                finalize: () => patchState(store, { isLoading: false }),
               })
             )
           )
